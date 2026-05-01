@@ -4,7 +4,7 @@ import os
 import csv
 
 class Logic(QMainWindow, Ui_Project2):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
 
@@ -105,7 +105,7 @@ class Logic(QMainWindow, Ui_Project2):
     def pullgrade(self) -> None:
         """
         Function is connected to the pull final grade button and uses the students name to search the
-        "grade.csv" file and pull the final grade for the student name entered 
+        "grade.csv" file and pull the final grade for the student name entered.
         """
         file = "grades.csv"
 
@@ -139,8 +139,8 @@ class Logic(QMainWindow, Ui_Project2):
 
     def newscore(self, text) -> None:
         """
-        function is connected to NO of attempts input box "input_attempts" and is used to dynamically display 
-        the number of the attempt the student took for the final.
+        Function is connected to NO of attempts input box "input_attempts" and is used to dynamically display 
+        the number of the attempts the student took for the final.
         :param text: Contains the current data entered within the "no of attempts" input box called "input_attempts"
         """
         try:
